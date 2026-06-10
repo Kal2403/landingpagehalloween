@@ -1,86 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halloween Page</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A responsive Halloween landing page with spooky products, categories, and seasonal offers.">
+  <meta name="theme-color" content="#e24b05">
+  <title>Halloween Landing Page</title>
+  <link rel="icon" href="./img/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
 </head>
+
 <body>
-    <!-- START HEADER -->
-    <header class="header" id="header">
-        <nav class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="/img/trick-treat5-img.png" alt="pumpkin head" class="nav-logo-img">
-                Halloween
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <div class="logo">
+        <img src="./img/trick-treat5-img.png" alt="Halloween pumpkin logo" class="halloween-img">
+        <a href="index.html" class="halloween">Halloween</a>
+      </div>
+      <ul class="list-container" id="primary-navigation">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#candy">Candy</a></li>
+        <li><a href="#new">New</a></li>
+        <li><a class="btn" href="#newsletter">Support</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
+        <button class="cart-toggle" id="cart-toggle" type="button" aria-label="Open cart">
+          <i class="bx bx-cart-alt" aria-hidden="true"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+          <i class="bx bx-menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="slider-container" id="home">
+      <div class="slider">
+        <div class="slide active">
+          <div class="ghost-one">
+            <img class="home-img" src="./img/home1-img.png" alt="floating pumpkin">
+            <div class="info-img">
+              <h6>The Labu "Reiza"</h6>
+              <p>The living pumpkin</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="titles">
+              <h3>#1 scariest pumpkin</h3>
+              <h2>Uoooo <br> trick or <br> treat!! </h2>
+              <p>Hi, I`m Reiza, people call me "El Labu". I am currently trying to learn something new, building my own bike with parts made only in Malaysia.</p>
+            </div>
+            <div class="description-btn">
+              <a class="btn" href="#candy">Book Now</a>
+              <a class="track-link" href="#new">Track Record <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="ghost-two">
+            <img class="home-img" src="./img/home2-img.png" alt="floating ghosts">
+            <div class="info-img">
+              <h6>Adino & Grahami</h6>
+              <p>There are no words to describe them</p>
+            </div>
+          </div>
+          <div class="description">
+            <div class="titles">
+              <h3>#2 scariest ghosts</h3>
+              <h2>Uoooo <br> trick or <br> treat!! </h2>
+              <p>Adino steals cotton candy from his brother and eats them all in one bite, a hungry beast. Grahami can no longer contain his anger towards Adino.</p>
+            </div>
+            <div class="description-btn">
+              <a class="btn" href="#candy">Book Now</a>
+              <a class="track-link" href="#new">Track Record <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="ghost-three">
+            <img class="home-img" src="./img/home3-img.png" alt="floating skull">
+            <div class="info-img">
+              <h6>Captain Sem</h6>
+              <p>Veteran Spooky Skull</p>              
+            </div>
+          </div>
+          <div class="description">
+            <div class="titles">
+              <h3>#3 top scariest skull</h3>
+              <h2>Uoooo <br> trick or <br> treat!! </h2>
+              <p>Hi, I`m Reiza, people call me "El Labu". I am currently trying to learn something new, building my own bike with parts made only in Malaysia.</p>
+            </div>
+            <div class="description-btn">
+              <a class="btn" href="#candy">Book Now</a>
+              <a class="track-link" href="#new">Track Record <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dots">
+        <button class="dot active" type="button" aria-label="Show slide 1" data-slide="0"></button>
+        <button class="dot" type="button" aria-label="Show slide 2" data-slide="1"></button>
+        <button class="dot" type="button" aria-label="Show slide 3" data-slide="2"></button>
+       </div>
+    </section>
+    
+    <section class="favorite-scared">
+      <div class="scared-category">
+        <h2>Favorite Scare Categories</h2>
+        <div class="card-container">
+          <div class="card">
+            <img src="./img/category1-img.png" alt="Ghost category">
+            <h6>Ghosts</h6>
+            <p>Choose the ghosts, the scariest there are.</p>
+          </div>
+          <div class="card">
+            <img src="./img/category2-img.png" alt="Pumpkin category">
+            <h6>Pumpkins</h6>
+            <p>You look at the scariest pumpkins there is.</p>
+          </div>
+          <div class="card">
+            <img src="./img/category3-img.png" alt="Witch hat category">
+            <h6>Witch Hat</h6>
+            <p>Pick the most stylish witch hats out there.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-container" id="about">
+      <div class="about-halloween">
+        <div class="about-description">
+          <h2>About Halloween Night</h2>
+          <p>Night of all the saints, or all the dead, is celebrated on October 31 and it is a very fun international celebration, this celebration comes from ancient origins, and is already celebrated by everyone.</p>
+          <a class="btn" href="#candy">Learn more</a>
+        </div>
+        <div class="about-img-container">
+          <img class="about-img" src="./img/about-img.png" alt="witch bold">
+        </div>
+      </div>
+    </section>
+
+    <section class="treat-or-trick" id="candy">
+      <div class="treat-container">
+        <h2>Treat or Trick</h2>
+        <div class="treat-cards">
+          <div class="treat-card">
+            <img src="./img/trick-treat1-img.png" alt="Toffee candy" class="treat-img">
+            <h3>Toffee</h3>
+            <span>Candy</span>
+            <span>$11.99</span>
+            <button class="btn cart-btn" type="button" aria-label="Add Toffee to cart" data-product="Toffee">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="treat-card">
+            <img src="./img/trick-treat2-img.png" alt="Bone accessory" class="treat-img">
+            <h3>Bone</h3>
+            <span>Accessory</span>
+            <span>$8.99</span>
+            <button class="btn cart-btn" type="button" aria-label="Add Bone to cart" data-product="Bone">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="treat-card">
+            <img src="./img/trick-treat3-img.png" alt="Scarecrow accessory" class="treat-img">
+            <h3>Scarecrow</h3>
+            <span>Accessory</span>
+            <span>$15.99</span>
+            <button class="btn cart-btn" type="button" aria-label="Add Scarecrow to cart" data-product="Scarecrow">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="treat-card">
+            <img src="./img/trick-treat4-img.png" alt="Candy cane" class="treat-img">
+            <h3>Candy Cane</h3>
+            <span>Candy</span>
+            <span>$7.99</span>
+            <button class="btn cart-btn" type="button" aria-label="Add Candy Cane to cart" data-product="Candy Cane">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="treat-card">
+            <img src="./img/trick-treat5-img.png" alt="Pumpkin candy" class="treat-img">
+            <h3>Pumpkin</h3>
+            <span>Candy</span>
+            <span>$19.99</span>
+            <button class="btn cart-btn" type="button" aria-label="Add Pumpkin to cart" data-product="Pumpkin">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="treat-card">
+            <img src="./img/trick-treat6-img.png" alt="Ghost accessory" class="treat-img">
+            <h3>Ghost</h3>
+            <span>Accessory</span>
+            <span>$17.99</span>
+            <button class="btn cart-btn" type="button" aria-label="Add Ghost to cart" data-product="Ghost">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="banner-container">
+        <div class="banner-img-container">
+          <img class="discount-img" src="./img/discount-img.png" alt="bat">
+        </div>
+        <div class="discount-description">
+          <h5>50% discount <br> About new products</h5>
+          <a class="btn" href="#new">Go to New</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="newarrival" id="new">
+      <div class="newarrival-container">
+        <h2>New Arrivals</h2>
+        <div class="newarrival-cards">
+          <div class="newarrival-card">
+            <div class="card-div-one">
+              <span class="badge">New</span>
+              <img src="./img/new1-img.png" alt="Haunted house">
+            </div>
+            <div class="card-div-two">
+              <h3>Haunted House</h3>
+              <span>Accessory</span>
+              <div class="price">
+                <span>$7.99</span>
+                <span>$14.99</span>
+              </div>
+            </div>
+            <button class="btn cart-btn" type="button" aria-label="Add Haunted House to cart" data-product="Haunted House">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="newarrival-card">
+            <div class="card-div-one">
+              <span class="badge">New</span>
+              <img src="./img/new2-img.png" alt="Halloween candle">
+            </div>
+            <div class="card-div-two">
+              <h3>Halloween Candle</h3>
+              <span>Accessory</span>
+              <div class="price">
+                <span>$14.99</span>
+                <span>$29.99</span>
+              </div>
+            </div>
+            <button class="btn cart-btn" type="button" aria-label="Add Halloween Candle to cart" data-product="Halloween Candle">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="newarrival-card">
+            <div class="card-div-one">
+              <span class="badge">New</span>
+              <img src="./img/new6-img.png" alt="Witch broom">
+            </div>
+            <div class="card-div-two">
+              <h3>Witch Broom</h3>
+              <span>Accessory</span>
+              <div class="price">
+                <span>$11.99</span>
+                <span>$21.99</span>
+              </div>
+            </div>
+            <button class="btn cart-btn" type="button" aria-label="Add Witch Broom to cart" data-product="Witch Broom">
+              <i class="bx bx-cart-alt trick__icon" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-container">
+
+    <div class="our-newsletter" id="newsletter">
+      <h2>Our Newsletter</h2>
+      <p>Promotions, new products, and sales directly to your inbox.</p>
+      <form class="form-email" id="newsletter-form" novalidate>
+        <label class="visually-hidden" for="email">Email address</label>
+        <input class="input-email" id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+        <button class="btn" type="submit">Subscribe</button>
+        <p class="form-message" id="newsletter-message" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-description-container">
+        <div class="contact-card">
+          <a href="index.html" class="hallo-img-container">
+            <img src="./img/logo.png" alt="skull" class="img-contact-logo">
+            <h4>Halloween</h4>
+          </a>
+          <p>Enjoy the scariest night of your life</p>
+          <div class="social-container">
+            <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <i class="bx bxl-facebook" aria-hidden="true"></i>
             </a>
-            <div class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#About" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#Candy" class="nav-link">Candy</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#New" class="nav-link">New</a>
-                    </li>
-                    <a href="#" class="button button-ghost">Support</a>
-                    
-                </ul>
-                <div class="nav-close" id="nav-close">
-                    <i class="uil uil-times"></i>
-                </div>
-                <img src="/img/nav-img.png" alt="" class="nav-img">
+            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <i class="bx bxl-instagram-alt" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.twitter.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <i class="bx bxl-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <h4>About</h4>
+          <ul>
+            <li>About us</li>
+            <li>Features</li>
+            <li>News</li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <h4>Our Services</h4>
+          <ul>
+            <li>Pricing</li>
+            <li>Discounts</li>
+            <li>Shipping mode</li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <h4>Our Company</h4>
+          <ul>
+            <li>Blog</li>
+            <li>About us</li>
+            <li>Our mission</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-            </div>
-            <div class="nav-togle" id="nav-toggle">
-                <i class="uil uil-times"></i>
-            </div>
-        </nav>
-    </header>
-    <!-- END HEADER -->
+  <div class="cart-modal" id="cart-modal" aria-hidden="true">
+    <div class="cart-modal__overlay" data-cart-close></div>
+    <aside class="cart-panel" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+      <div class="cart-panel__header">
+        <div>
+          <p>Halloween cart</p>
+          <h2 id="cart-title">Your treats</h2>
+        </div>
+        <button class="cart-close" type="button" aria-label="Close cart" data-cart-close>
+          <i class="bx bx-x" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="cart-items" id="cart-items">
+        <p class="cart-empty">Your cart is empty.</p>
+      </div>
+      <div class="cart-summary">
+        <div>
+          <span>Total</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+        <button class="btn checkout-btn" type="button">Checkout</button>
+      </div>
+    </aside>
+  </div>
 
-    <!-- Start Container -->
-    <main class="main">
-        <section class="home container" id="home">
-            <div class="swiper home-swiper">
-                <div class="swiper-wrapper">
-                    <section class="swiper-slide">
-                        <!-- 1 -->
-                        <div class="home-content grid">
-                            <div class="home-group">
-                                <img src="/img/footer1-img.png" alt="" class="home-img">
-                                <div class="home-indicator">
-
-                                </div>
-                                <div class="home-details-img">
-                                    <h4 class="home-details-subtitle">The Labu "Reiza"</h4>
-                                    <span class="home-details-subtitle">
-                                        La calabaza viva
-                                    </span>
-                                </div>
-                            </div>
-
-                            <div class="home-data">
-                                <h3 class="home-subtitle">#1 Fantasma mas aterrador</h3>
-                                <h1 class="home-title">UOOOO <br/>TRUCO O <br/>TRATO!!</h1>
-                                <p class="home-description">
-                                    Hi, I'm Reaiza, people call me "El Labu"
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- End Container -->
-    <script src="js/index.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>
